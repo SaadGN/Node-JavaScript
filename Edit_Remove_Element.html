@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Edit/Remove Element </title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(lang)
+    {
+        const li = document.createElement('li');
+        li.innerHTML = `${lang}`
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage("Python")
+    addLanguage("Typescript")
+
+    function addOptiLanguage(lang)
+    {
+        const li = document.createElement("li")
+        li.appendChild(document.createTextNode(lang))
+        document.querySelector('.language').appendChild(li)
+
+    }
+    addOptiLanguage("Swift")
+
+
+    //edit
+    const editLang = document.querySelector("li:nth-child(2)")
+    console.log(editLang)
+    //editLang.innerHTML = "c++"
+    const newLi = document.createElement("li")
+    newLi.textContent = "c++"
+    editLang.replaceWith(newLi)
+
+    const edit = document.querySelector("li:first-child")
+    edit.outerHTML = "<li>Typescript</li>"
+
+
+    //Remove
+    const rem = document.querySelector("li:last-child")
+    rem.remove()
+
+</script>
+</html>
