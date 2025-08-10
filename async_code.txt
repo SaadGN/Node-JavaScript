@@ -1,0 +1,42 @@
+=> JAVASCRIPT : -
+[default]
+1) synchronous
+2) single threaded
+
+*************************************
+
+=> EXECUTIOIN CONTEXT:-
+  line by line
+
+*************************************
+
+=> BLOCK CODE:- ( sync code )
+block the flow of the program!!!
+read/write file
+
+*************************************
+
+=> NON-BLOCK CODE:- ( Async code )
+does not block the flow of the program
+reads/writes flow
+
+    1) Working mechanism:
+            i) Js Engine 
+                a)heap.
+                b)stack : 
+                
+            ii) Web API / Node :-
+                a)DOM
+                b)set timeout------------------------------
+                c)set interval                            |
+                d)fetchy()---                             |
+                            |                             |
+                            |                   Reigister callback
+                            |                             |
+                 [task queue 2]promise                    |
+                    ( High Priority )                     |
+                            |                             |
+                            |                       task Queue 1
+                            |                             |
+                            |                             |   
+                          STACK                         STACK
