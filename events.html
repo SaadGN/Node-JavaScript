@@ -1,0 +1,71 @@
+
+<html>
+    <head>
+        <title>EVENTS</title>
+    </head>
+
+    <body style="background-color: #414141; color: aliceblue;">
+    
+        <ul  id="image">  <h3>IMAGES</h3>
+            
+            <li>
+                <img id="google" src="image/download.jpeg" alt="">
+           
+            </li>
+
+            <li>
+                <a style="color: aliceblue;" href="https://www.google.com" id="link">
+                     GOOGLE
+                </a>
+
+            </li>
+        
+        </ul>
+    
+    </body>
+
+    <script>
+
+        // type,timeStamp
+        // clientX,clientY,screenX,screenY,
+        // defaultPrevented,srcElement,toelement 
+        // target currentTarget  
+        // altKey, shiftKey , keycode
+
+
+        //Event propagation: 
+        // 1) event bubbling(default) [inside to outside]
+        // 2) event capturing [top to bottom]
+
+
+        document.getElementById('image').addEventListener('click',function(e) {
+            console.log('clicked in ul');
+        } , false)
+
+
+        document.getElementById('google').addEventListener('click',function(e) {
+        console.log('picture clicked');
+        
+        } , false)
+
+        document.getElementById('link').addEventListener('click',function(e){
+            e.preventDefault();
+            console.log("Google link clicked");
+        })
+
+        document.querySelector('#image').addEventListener('click',function(e)
+        {
+            console.log(e.target.tagName)
+
+            if(e.target.tagName === 'IMG')
+            {
+                console.log(e.target.parentNode)
+                let removeIt = e.target.parentNode
+                removeIt.remove()
+            }
+            
+        })
+    
+    </script>
+
+</html>
