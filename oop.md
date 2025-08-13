@@ -34,8 +34,8 @@
         => Polymorphism allows different classes to be treated as instances of the same parent class.
 
 ## new keyword :
-step 1 : empty object (instance) is created
-step 2 : construcyor function is called by new
-step 3 : arguments are injected in constructor /
+    -step 1 : empty object (instance) is created
+    -step 2 : construcyor function is called by new
+    -step 3 : arguments are injected in constructor /
          The constructor function is called with this set to the new object
-step 4 : get in function [ that object is returned.]
+    -step 4 : get in function [ that object is returned.]
